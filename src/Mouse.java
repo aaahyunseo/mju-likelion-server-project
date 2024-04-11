@@ -1,10 +1,11 @@
-public class Mouse extends Part implements Power{
-    public Mouse(String name, int price, String manufacturer) {
+public class Mouse extends Part implements Requisite {
+    public Mouse(String name, int price, ManufacturerType manufacturer) {
         super(name, price, manufacturer);
     }
 
     //마우스 기능
-    public void click(){
+    @Override
+    public void run(){
         System.out.println(name + " 클릭합니다.");
     }
 

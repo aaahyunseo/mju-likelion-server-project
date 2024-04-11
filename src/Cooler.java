@@ -1,13 +1,14 @@
-public class Cooler extends Part implements Power{
-    private String coolingMethod;   //냉각방식
+public class Cooler extends Part implements Requisite {
+    private CoolerType coolingMethod;   //냉각방식
 
-    public Cooler(String name, int price, String manufacturer, String coolingMethod) {
+    public Cooler(String name, int price, ManufacturerType manufacturer, CoolerType coolingMethod) {
         super(name, price, manufacturer);
         this.coolingMethod = coolingMethod;
     }
 
     //cooler 기능
-    public void cool(){
+    @Override
+    public void run(){
         System.out.println(name + " 냉각합니다.");
     }
 

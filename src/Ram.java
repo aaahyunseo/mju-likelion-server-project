@@ -1,13 +1,14 @@
-public class Ram extends Part implements Power {
+public class Ram extends Part implements Requisite {
     private int capacity;   //용량
 
-    public Ram(String name, int price, String manufacturer, int capacity) {
+    public Ram(String name, int price, ManufacturerType manufacturer, int capacity) {
         super(name, price, manufacturer);
         this.capacity = capacity;
     }
 
     //Ram기능
-    public void readData() {
+    @Override
+    public void run() {
         System.out.println(name +" 데이터를 읽습니다.");
     }
 
