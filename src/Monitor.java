@@ -1,4 +1,4 @@
-public class Monitor extends Part implements Requisite {
+public class Monitor extends Part {
     private int size;   //모니터 크기
 
     public Monitor(String name, int price, ManufacturerType manufacturer, int size) {

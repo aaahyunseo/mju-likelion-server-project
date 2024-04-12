@@ -1,4 +1,4 @@
-public class Cooler extends Part implements Requisite {
+public class Cooler extends Part {
     private CoolerType coolingMethod;   //냉각방식
 
     public Cooler(String name, int price, ManufacturerType manufacturer, CoolerType coolingMethod) {

@@ -1,4 +1,4 @@
-public class GraphicsCard extends Part implements Requisite {
+public class GraphicsCard extends Part {
     private PurposeType purpose; //용도
 
     public GraphicsCard(String name, int price, ManufacturerType manufacturer, PurposeType purpose) {

@@ -1,4 +1,4 @@
-public class Mouse extends Part implements Requisite {
+public class Mouse extends Part {
     public Mouse(String name, int price, ManufacturerType manufacturer) {
         super(name, price, manufacturer);
     }

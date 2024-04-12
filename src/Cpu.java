@@ -1,4 +1,4 @@
-public class Cpu extends Part implements Requisite {
+public class Cpu extends Part {
 
     private int speed;  //속도
     private PurposeType purpose; //용도

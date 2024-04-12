@@ -1,4 +1,4 @@
-public class PowerSupplier extends Part implements Requisite {
+public class PowerSupplier extends Part {
     private String output; //출력
 
     public PowerSupplier(String name, int price, ManufacturerType manufacturer, String output) {

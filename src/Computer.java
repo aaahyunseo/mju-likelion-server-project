@@ -7,7 +7,7 @@ public class Computer {
     private Ram ram;    //필수
     private GraphicsCard graphicsCard;  //필수
     private PowerSupplier powerSupplier;    //필수
-    private static List<Part> option;   //부가적 부품들
+    private static List<Part> AdditionalParts;   //부가적 부품들
 
     public Computer(Cpu cpu, Ram ram, GraphicsCard graphicsCard, PowerSupplier powerSupplier) {
         this.cpu = cpu;
@@ -62,12 +62,21 @@ public class Computer {
 
         public Computer build() {
             Computer computer = new Computer(cpu, ram, graphicsCard, powerSupplier);
-            option = new ArrayList<>();
+            AdditionalParts = new ArrayList<>();
 
-            option.add(cooler);
-            option.add(mouse);
-            option.add(keyboard);
-            option.add(monitor);
+            //부가적 부품들이 선택되었을 때만 리스트에 추가하기
+            if(cooler != null){
+                AdditionalParts.add(cooler);
+            }
+            if(mouse != null){
+                AdditionalParts.add(mouse);
+            }
+            if(keyboard != null){
+                AdditionalParts.add(keyboard);
+            }
+            if(monitor != null){
+                AdditionalParts.add(monitor);
+            }
             return computer;
         }
     }
@@ -80,10 +89,8 @@ public class Computer {
         graphicsCard.on();
         powerSupplier.on();
         //선택 부품 부분
-        for(Part part : option){
-            if(part != null) {
-                part.on();
-            }
+        for(Part part : AdditionalParts){
+            part.on();
         }
     }
 
@@ -95,10 +102,8 @@ public class Computer {
         graphicsCard.off();
         powerSupplier.off();
         //선택 부품 부분
-        for(Part part : option){
-            if(part != null) {
-                part.off();
-            }
+        for(Part part : AdditionalParts){
+            part.off();
         }
     }
 
@@ -110,10 +115,8 @@ public class Computer {
         graphicsCard.run();
         powerSupplier.run();
         //선택 부품 부분
-        for(Part part : option){
-            if(part != null) {
-                part.run();
-            }
+        for(Part part : AdditionalParts){
+            part.run();
         }
     }
 

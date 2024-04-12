@@ -1,4 +1,4 @@
-public class Ram extends Part implements Requisite {
+public class Ram extends Part {
     private int capacity;   //용량
 
     public Ram(String name, int price, ManufacturerType manufacturer, int capacity) {

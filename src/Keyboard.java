@@ -1,4 +1,4 @@
-public class Keyboard extends Part implements Requisite {
+public class Keyboard extends Part {
     private KeyType arrangement;    //키배열
 
     public Keyboard(String name, int price, ManufacturerType manufacturer, KeyType arrangement) {
